@@ -14,10 +14,10 @@
 3-  Total salary for each department in each country:
 
 	select sum(e.salary) total_salary, d.department_name, c.country_name country_name
-   	 from hr.dbo.departments d inner join hr.dbo.employees e on d.department_id = e.department_id inner join hr.dbo.locations l on l.location_id = d.location_id right join hr.dbo.countries c on c.country_id = l.country_id
-    	group by c.country_name, d.department_name
+	from hr.dbo.departments d inner join hr.dbo.employees e on d.department_id = e.department_id inner join hr.dbo.locations l on l.location_id = d.location_id inner join hr.dbo.countries c on c.country_id = l.country_id
+	group by c.country_name, d.department_name
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1- Number of employees in each department:
 
